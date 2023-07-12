@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { Main } from "./main";
+import { UserContext } from "../Context/userContext";
 
 export const Home = (props: any) => {
+  const { numberMatches }: any = useContext(UserContext);
+
   return (
     <View style={styles.container}>
       <Text
@@ -23,7 +25,7 @@ export const Home = (props: any) => {
         <TouchableOpacity
           onPress={() => {
             props.navigation.navigate("Information");
-            // <Main matches={1}></Main>;
+            numberMatches(1);
           }}
           style={styles.buttons}
         >
@@ -31,8 +33,8 @@ export const Home = (props: any) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            // <Main matches={3}></Main>;
             props.navigation.navigate("Information");
+            numberMatches(3);
           }}
           style={styles.buttons}
         >
@@ -40,8 +42,8 @@ export const Home = (props: any) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            // <Main matches={5}></Main>;
             props.navigation.navigate("Information");
+            numberMatches(5);
           }}
           style={styles.buttons}
         >

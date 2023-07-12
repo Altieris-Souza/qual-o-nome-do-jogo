@@ -24,6 +24,7 @@ export default function Loading(props: any) {
             fontSize: 23,
             marginBottom: 250,
             color: "white",
+            fontWeight: "700",
           }}
         >
           QUAL É O NOME DO JOGO?
