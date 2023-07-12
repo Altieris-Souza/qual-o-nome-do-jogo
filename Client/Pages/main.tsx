@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { StyleSheet, Text, View, StatusBar, Button } from "react-native";
+import { UserContext } from "../Context/userContext";
 
 export const Main = (props: any) => {
   const [points, setPoints] = useState(0);
+
+  const { players }: any = useContext(UserContext);
+
+  console.log(players);
 
   return (
     <View style={styles.container}>
@@ -32,8 +37,8 @@ export const Main = (props: any) => {
           gap: 20,
         }}
       >
-        <Text style={styles.names}>Alguém</Text>
-        <Text style={styles.names}>Altieris</Text>
+        <Text style={styles.names}>{players.player1}</Text>
+        <Text style={styles.names}>{players.player2}</Text>
       </View>
     </View>
   );

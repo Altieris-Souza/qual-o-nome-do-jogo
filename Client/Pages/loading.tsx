@@ -9,7 +9,7 @@ let year = new Date().getFullYear();
 export default function Loading(props: any) {
   setTimeout(function () {
     props.navigation.navigate("Home");
-  }, 7000);
+  }, 3000);
 
   return (
     <View style={styles.container}>
