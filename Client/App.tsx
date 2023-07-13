@@ -6,6 +6,7 @@ import { Home } from "./Pages/home";
 import { Main } from "./Pages/main";
 import { Information } from "./Pages/information";
 import { UserProvider } from "./Context/userContext";
+import { Winner } from "./Pages/winner";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -32,6 +33,11 @@ export default function App() {
           <Stack.Screen
             name="Information"
             component={Information}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Winner"
+            component={Winner}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

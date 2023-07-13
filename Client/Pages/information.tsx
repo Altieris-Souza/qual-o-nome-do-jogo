@@ -6,6 +6,7 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  Vibration,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { UserContext } from "../Context/userContext";
@@ -93,6 +94,9 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     fontSize: 20,
     marginLeft: 15,
+    textShadowColor: "#D9BA61",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10,
   },
 
   input: {

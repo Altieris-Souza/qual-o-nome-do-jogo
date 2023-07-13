@@ -25,6 +25,9 @@ export default function Loading(props: any) {
             marginBottom: 250,
             color: "white",
             fontWeight: "700",
+            textShadowColor: "#D9BA61",
+            textShadowOffset: { width: 1, height: 1 },
+            textShadowRadius: 10,
           }}
         >
           QUAL É O NOME DO JOGO?
