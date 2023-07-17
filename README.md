@@ -1,10 +1,6 @@
 <h1 align="center">Qual é o nome do jogo</h1>
 
 <p align="center">
-  <img src="path_to_your_logo.png" alt="Qual é o nome do jogo Logo" width="200" />
-</p>
-
-<p align="center">
   <strong>Um contador de pontos para o jogo de truco</strong>
 </p>
 
@@ -28,6 +24,6 @@ Este projeto é um contador de pontos para o jogo de truco, desenvolvido usando 
 Contato
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato comigo.
 
-Nome: Altieris Souza
-E-mail: altmsf15@gmail.com
-LinkedIn: https://www.linkedin.com/in/altierissouza/
+<p>Nome: Altieris Souza</p>
+<p>E-mail: altmsf15@gmail.com</p>
+<p>LinkedIn: https://www.linkedin.com/in/altierissouza/</p>
