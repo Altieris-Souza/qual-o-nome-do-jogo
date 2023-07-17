@@ -7,6 +7,7 @@ import { Main } from "./Pages/main";
 import { Information } from "./Pages/information";
 import { UserProvider } from "./Context/userContext";
 import { Winner } from "./Pages/winner";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -42,6 +43,7 @@ export default function App() {
           />
         </Stack.Navigator>
       </UserProvider>
+      {/* <StatusBar style="auto" /> */}
     </NavigationContainer>
   );
 }

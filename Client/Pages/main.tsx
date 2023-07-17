@@ -12,18 +12,20 @@ import { UserContext } from "../Context/userContext";
 export const Main = (props: any) => {
   const [points, setPoints] = useState(1);
 
-  // const [valendo, setValendo] = useState(6);
+  const [valendo, setValendo] = useState(6);
 
   const { players }: any = useContext(UserContext);
 
   const [pointsPlayerOne, setPointsOne] = useState(0);
   const [pointsPlayerTwo, setPointsTwo] = useState(0);
+  const [opacityTest, setOpacityTest] = useState(0.5);
 
   if (pointsPlayerOne >= 12 || pointsPlayerTwo >= 12) {
     props.navigation.navigate("Winner");
 
     setPointsOne(0);
     setPointsTwo(0);
+    setOpacityTest(0.5);
   }
 
   const [modalVisible, setModalVisible] = useState(false);
@@ -136,6 +138,7 @@ export const Main = (props: any) => {
         <TouchableOpacity
           onPress={() => {
             setPoints(3);
+            setOpacityTest(0.9);
           }}
           style={styles.button}
         >
@@ -150,36 +153,95 @@ export const Main = (props: any) => {
             Qual é o nome do jogo?
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            // if (valendo == 6) {
-            //   setValendo(9);
-            // } else if (valendo == 9) {
-            //   setValendo(0);
-            // }
-          }}
-          style={{
-            width: 310,
-            backgroundColor: "transparent",
-            borderRadius: 8,
-            alignSelf: "center",
-            padding: 15,
-            borderColor: "#D9BA61",
-            borderWidth: 2,
-            marginTop: 20,
-          }}
-        >
-          <Text
+        <View style={{ display: "flex", flexDirection: "row", gap: 18 }}>
+          <TouchableOpacity
+            onPress={() => {
+              if (points > 1) {
+                setPoints(6);
+              }
+            }}
             style={{
-              textAlign: "center",
-              color: "white",
-              fontWeight: "700",
-              fontSize: 20,
+              width: 90,
+              backgroundColor: "transparent",
+              borderRadius: 8,
+              alignSelf: "center",
+              padding: 15,
+              borderColor: "#D9BA61",
+              borderWidth: 2,
+              marginTop: 20,
+              opacity: opacityTest,
             }}
           >
-            {/* +{valendo} */}
-          </Text>
-        </TouchableOpacity>
+            <Text
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontWeight: "700",
+                fontSize: 20,
+              }}
+            >
+              +6
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              if (points > 1) {
+                setPoints(9);
+              }
+            }}
+            style={{
+              width: 90,
+              backgroundColor: "transparent",
+              borderRadius: 8,
+              alignSelf: "center",
+              padding: 15,
+              borderColor: "#D9BA61",
+              borderWidth: 2,
+              marginTop: 20,
+              opacity: opacityTest,
+            }}
+          >
+            <Text
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontWeight: "700",
+                fontSize: 20,
+              }}
+            >
+              +9
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              if (points > 1) {
+                setPoints(12);
+              }
+            }}
+            style={{
+              width: 90,
+              backgroundColor: "transparent",
+              borderRadius: 8,
+              alignSelf: "center",
+              padding: 15,
+              borderColor: "#D9BA61",
+              borderWidth: 2,
+              marginTop: 20,
+              opacity: opacityTest,
+            }}
+          >
+            <Text
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontWeight: "700",
+                fontSize: 20,
+              }}
+            >
+              +12
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
       <View
         style={{
@@ -213,6 +275,7 @@ export const Main = (props: any) => {
             onPress={() => {
               setPointsOne(pointsPlayerOne + points);
               setPoints(1);
+              setOpacityTest(0.5);
             }}
           >
             Nós
@@ -272,7 +335,7 @@ export const Main = (props: any) => {
 
       <Modal
         visible={modalVisible}
-        animationType="slide"
+        animationType="fade"
         transparent={true}
         onRequestClose={handleCloseModal}
       >
@@ -282,7 +345,7 @@ export const Main = (props: any) => {
           onPress={handleOverlayPress}
         >
           <View style={styles.modalContent}>
-            <Text style={styles.modalText}>Deseja confirmar?</Text>
+            <Text style={styles.modalText}>Deseja zerar os pontos?</Text>
             <View style={styles.buttonContainer}>
               <TouchableOpacity
                 onPress={() => {
@@ -290,6 +353,7 @@ export const Main = (props: any) => {
                   setPointsOne(0);
                   setPointsTwo(0);
                   setPoints(1);
+                  setOpacityTest(0.5);
                 }}
                 style={styles.confirmButton}
               >
@@ -353,12 +417,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    // backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
   modalContent: {
     backgroundColor: "white",
     padding: 20,
     borderRadius: 10,
+    borderColor: "#D9BA61",
+    borderWidth: 1,
   },
   modalText: {
     fontSize: 18,
@@ -368,16 +434,21 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "center",
+    gap: 0,
   },
   confirmButton: {
     backgroundColor: "green",
     padding: 10,
     borderRadius: 5,
     marginRight: 10,
+    borderColor: "#D9BA61",
+    borderWidth: 1,
   },
   cancelButton: {
     backgroundColor: "red",
     padding: 10,
     borderRadius: 5,
+    borderColor: "#D9BA61",
+    borderWidth: 1,
   },
 });

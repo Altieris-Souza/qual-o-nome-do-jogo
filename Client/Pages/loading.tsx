@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { Image, StyleSheet, Text, View, Button } from "react-native";
+import LottieView from "lottie-react-native";
 
 let day = new Date().getDate();
 let month = new Date().getMonth() + 1;
@@ -38,7 +39,7 @@ export default function Loading(props: any) {
           © [{day}/{month}/{year}] Altieris Souza. Todos os direitos reservados.
         </Text>
       </View>
-      {/* <StatusBar style="auto" /> */}
+      <StatusBar style="inverted" />
     </View>
   );
 }
