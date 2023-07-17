@@ -12,7 +12,7 @@
 
 ## Sobre o Projeto
 
-Este projeto é um contador de pontos para o jogo de truco, desenvolvido usando React Native para o aplicativo móvel e Node.js para a API.
+- Este projeto é um contador de pontos para o jogo de truco, desenvolvido usando React Native para o aplicativo móvel e Node.js para a API.
 
 ### Funcionalidades
 
@@ -21,8 +21,9 @@ Este projeto é um contador de pontos para o jogo de truco, desenvolvido usando 
 - Acompanhe o placar e determine o vencedor automaticamente
 - Interface intuitiva e fácil de usar
 
-Contato
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato comigo.
+### Contato
+
+- Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato comigo.
 
 <p>Nome: Altieris Souza</p>
 <p>E-mail: altmsf15@gmail.com</p>
