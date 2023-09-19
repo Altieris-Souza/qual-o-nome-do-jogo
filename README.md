@@ -1,4 +1,4 @@
-<h1 align="center">Qual é o nome do jogo</h1>
+<h1 align="center">Qual é o nome do jogo - Em desenvolvimento</h1>
 
 <p align="center">
   <strong>Um contador de pontos para o jogo de truco</strong>
